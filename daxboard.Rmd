@@ -1,19 +1,26 @@
+
 ---
-title: "Coca-Cola Overview"
-output: 
-  flexdashboard::flex_dashboard:
-    orientation: columns
-    vertical_layout: fill
+title: ""
+author: ""
+date: ''
+output:
+  html_document:
+    css: FORMATO2.css
+    highlight: textmate
+    theme: cosmo
+  
 ---
 
-```{r setup, include=FALSE}
-library(flexdashboard)
-```
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" vspace="50" align="right"></A>') 
+    }); 
+</script> 
 
-Column {data-width=500}
------------------------------------------------------------------------
+<br /><br /><br /><br />
 
-### Group Budget
+## Group Budget
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 
@@ -43,11 +50,12 @@ bold = T, width = "2cm") %>%
 
 ```
 
-Column {data-width=500}
------------------------------------------------------------------------
+<br /><br />
 
+## Map
 
-### Map
+<br /><br /><br /><br /><br /><br />
+
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -75,9 +83,9 @@ lat = 41.3858148, lng = 2.1692236, zoom = 14, map_style = style)
 
 time_map %>% 
   ly_points(x= Longitude, y = Latitude, data = timeline, size = 10,
-    alpha = 7,fill_color = Category, line_alpha = 0, 
-    hover = c(Location, Address))
-```
+    alpha = 7,fill_color = Category, 
+    hover = c(Location, Address)) 
 
+```
 
 
