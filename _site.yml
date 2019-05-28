@@ -2,10 +2,9 @@ name: "my-website"
 navbar:
   title: "CE Events"
   left:
-    - text: "Quotation"
+    - text: "Daybyday"
       href: index.html
-    - text: "Budget&Map"
-      href: daxboard.html
-    - text: "Credentials"
+    - text: "Rooming"
       href: about.html
+   
    
